@@ -6,6 +6,7 @@ body {
     line-height: 1.6;
     max-width: 1200px;
     margin: 0 auto;
+    
 }
 
 /* Navigation */
@@ -207,7 +208,7 @@ a:hover {
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(255,255,255,0.2);
-    color: white;
+    color: black;
     border: none;
     font-size: 24px;
     cursor: pointer;
