@@ -17,26 +17,28 @@
 
     <h1>Image Gallery</h1>
     
-    <div class="gallery">
-        <div class="gallery-item">
-            <img src="images/photo1.jpg" alt="Photo 1" class="gallery-img">
-            <div class="caption">Caption for Photo 1</div>
+    <div class="gallery-container">
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="images/kawaii.png" alt="Kawaii Image" class="gallery-img">
+                <div class="gallery-caption">Kawaii Style</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/alpha-yowai.jpg" alt="JPG Image" class="gallery-img">
+                <div class="gallery-caption">Alpha Yowai</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/alpha-goat.gif" alt="GIF Animation" class="gallery-img">
+                <div class="gallery-caption">Alpha Goat</div>
+            </div>
         </div>
-        <div class="gallery-item">
-            <img src="images/photo2.jpg" alt="Photo 2" class="gallery-img">
-            <div class="caption">Caption for Photo 2</div>
-        </div>
-        <div class="gallery-item">
-            <img src="images/photo3.jpg" alt="Photo 3" class="gallery-img">
-            <div class="caption">Caption for Photo 3</div>
-        </div>
-        <!-- Add more gallery items as needed -->
+    </div>
 
     <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox">
         <span class="close">&times;</span>
         <div class="lightbox-content">
-            <img id="lightbox-img" src="" alt="">
+            <img id="lightbox-img" src="images/kawaii.png" alt="Kawaii Image">
             <div id="lightbox-caption"></div>
             <button class="nav-button prev" onclick="changeImage(-1)">&#10094;</button>
             <button class="nav-button next" onclick="changeImage(1)">&#10095;</button>
