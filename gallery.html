@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Gallery</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -16,9 +17,89 @@
 
     <h1>Image Gallery</h1>
     
-    <img src="images/kawaii.png" alt="PNG Image">
-    <img src="images/alpha-yowai.jpg" alt="JPG Image">
-    <img src="images/alpha-goat.gif" alt="GIF Animation">
+    <div class="gallery-container">
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="images/kawaii.png" alt="Kawaii Image" class="gallery-img">
+                <div class="gallery-caption">Kawaii Style</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/alpha-yowai.jpg" alt="JPG Image" class="gallery-img">
+                <div class="gallery-caption">Alpha Yowai</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/alpha-goat.gif" alt="GIF Animation" class="gallery-img">
+                <div class="gallery-caption">Alpha Goat</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <div id="lightbox-caption"></div>
+            <button class="nav-button prev" onclick="changeImage(-1)">&#10094;</button>
+            <button class="nav-button next" onclick="changeImage(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        let currentImageIndex = 0;
+        const galleryImages = document.querySelectorAll('.gallery-img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const closeBtn = document.querySelector('.close');
+
+        // Open lightbox on image click
+        galleryImages.forEach((img, index) => {
+            img.addEventListener('click', function() {
+                currentImageIndex = index;
+                openLightbox(img);
+            });
+        });
+
+        function openLightbox(img) {
+            const caption = img.nextElementSibling.textContent;
+            lightboxImg.src = img.src;
+            lightboxCaption.textContent = caption;
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+        }
+
+        function changeImage(n) {
+            currentImageIndex += n;
+            if (currentImageIndex >= galleryImages.length) {
+                currentImageIndex = 0;
+            } else if (currentImageIndex < 0) {
+                currentImageIndex = galleryImages.length - 1;
+            }
+            openLightbox(galleryImages[currentImageIndex]);
+        }
+
+        closeBtn.addEventListener('click', closeLightbox);
+
+        // Close lightbox when clicking outside the image
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (lightbox.style.display === 'flex') {
+                if (e.key === 'ArrowLeft') changeImage(-1);
+                if (e.key === 'ArrowRight') changeImage(1);
+                if (e.key === 'Escape') closeLightbox();
+            }
+        });
+    </script>
 </body>
 </html>
 
