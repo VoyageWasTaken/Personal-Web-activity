@@ -329,6 +329,73 @@ footer {
     }
 }
 
+/* Index style*/
+
+/* Home Container - Text Next to Image */
+.home-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.welcome-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.welcome-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+}
+
+.welcome-image img:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+}
+
+.welcome-text {
+    flex: 1;
+}
+
+.welcome-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+/* Responsive Design for Home Container */
+@media screen and (max-width: 768px) {
+    .home-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .welcome-image {
+        min-width: 100%;
+    }
+
+    .welcome-image img {
+        max-width: 100%;
+    }
+
+    .welcome-text p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home-container {
+        gap: 15px;
+    }
+
+    .welcome-text p {
+        font-size: 14px;
+    }
+}
+
 
 /* Gallery Styling */
 .gallery-container {
