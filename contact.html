@@ -2,33 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Information</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="activities.html">Activities</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><i class="fas fa-code"></i> Portfolio</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Me</a></li>
+                <li class="nav-item"><a href="activities.html" class="nav-link">Activities</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </nav>
 
-    <h1>Contact Information</h1>
-    
-    <table>
-        <tr>
-            <th>Contact Method</th>
-            <th>Details</th>
-        </tr>
-        <tr>
-            <td>Email</td>
-            <td><a>villenachristianjr_bscs@plmun.edu.ph</a></td>
-        </tr>
-        <tr>
-            <td>GitHub</td>
-            <td><a href="http://github.com/VoyageWasTaken" target="_blank">github.com/VoyageWasTaken</a></td>
-        </tr>
-    </table>
+    <main>
+        <section class="hero">
+            <h1>Contact Information</h1>
+            <p class="subtitle">Get in Touch With Me</p>
+        </section>
+
+        <section class="content">
+            <div class="contact-wrapper">
+                <table>
+                    <tr>
+                        <th>Contact Method</th>
+                        <th>Details</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email</span>
+                            </div>
+                        </td>
+                        <td><a href="mailto:villenachristianjr_bscs@plmun.edu.ph">villenachristianjr_bscs@plmun.edu.ph</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="contact-method">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </div>
+                        </td>
+                        <td><a href="http://github.com/VoyageWasTaken" target="_blank" rel="noopener noreferrer">github.com/VoyageWasTaken</a></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Christian Villena. All rights reserved.</p>
+    </footer>
+
+   
 </body>
 </html>

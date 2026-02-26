@@ -5,34 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Gallery</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="activities.html">Activities</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-
-    <h1>Image Gallery</h1>
-    
-    <div class="gallery-container"> 
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="images/kawaii.png" alt="Kawaii Image" class="gallery-img">
-                <div class="gallery-caption">Kawaii Style</div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><i class="fas fa-code"></i> Portfolio</a>
             </div>
-            <div class="gallery-item">
-                <img src="images/alpha-yowai.jpg" alt="JPG Image" class="gallery-img">
-                <div class="gallery-caption">Alpha Yowai</div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/alpha-goat.gif" alt="GIF Animation" class="gallery-img">
-                <div class="gallery-caption">Alpha Goat</div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Me</a></li>
+                <li class="nav-item"><a href="activities.html" class="nav-link">Activities</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
-    </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>Image Gallery</h1>
+            <p class="subtitle">My Collection of Creative Designs</p>
+        </section>
+
+        <section class="content">
+            <div class="gallery-container"> 
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="images/kawaii.png" alt="Kawaii Image" class="gallery-img">
+                        <div class="gallery-caption">Kawaii Style</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/alpha-yowai.jpg" alt="JPG Image" class="gallery-img">
+                        <div class="gallery-caption">Alpha Yowai</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/alpha-goat.gif" alt="GIF Animation" class="gallery-img">
+                        <div class="gallery-caption">Alpha Goat</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox">
@@ -45,10 +65,10 @@
         </div>
     </div>
 
-     <script src="javascript/gallery-javascript.js" defer></script>
-        
-    </script>
+    <footer>
+        <p>&copy; 2026 Christian Villena. All rights reserved.</p>
+    </footer>
+
+    <script src="javascript/gallery-javascript.js" defer></script>
 </body>
 </html>
-
-
